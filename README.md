@@ -29,26 +29,15 @@ where \(C\) represents item latent factors and \(P\) represents user latent fact
 - Noise robustness evaluation  
 - Visualization-driven diagnostics  
 
-## Repository Structure
-
-
-matrix-factorization-recommender/
-│
-├── notebooks/
-│ └── matrix_factorization_recommender.ipynb
-├── README.md
-├── requirements.txt
-└── LICENSE
-
 
 ## Methodology
 
 ### Matrix Factorization
 
 The optimization objective minimizes reconstruction error:
-
+```bash
 minimize || X − (C · Pᵀ) ||²
-
+```
 allowing discovery of hidden relationships between users and items through learned latent embeddings.
 
 ### Alternating Updates (RMR / ALS-style)
