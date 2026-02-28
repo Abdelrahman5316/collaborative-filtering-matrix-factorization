@@ -7,8 +7,9 @@ This repository presents an educational implementation of matrix factorization f
 
 Matrix factorization is a core technique used in collaborative filtering–based recommender systems. Given a user–item interaction matrix \(X\), the objective is to approximate it using low-rank latent matrices:
 
+```bash
 X ≈ C · Pᵀ
-
+```
 where \(C\) represents item latent factors and \(P\) represents user latent factors. This project investigates how optimization strategy and hyperparameter choices affect reconstruction accuracy and convergence behavior.
 
 ## Objectives
@@ -47,9 +48,9 @@ One factor matrix is fixed while solving analytically for the other, alternating
 ### Gradient Descent Optimization
 
 Latent factors are iteratively updated using gradient-based optimization:
-
+```bash
 θ = θ − η ∇L
-
+```
 Experiments demonstrate sensitivity to learning rate selection, convergence speed differences, and instability when step sizes are poorly chosen.
 
 ### Experimental Analysis
