@@ -7,9 +7,7 @@ This repository presents an educational implementation of matrix factorization f
 
 Matrix factorization is a core technique used in collaborative filtering–based recommender systems. Given a user–item interaction matrix \(X\), the objective is to approximate it using low-rank latent matrices:
 
-\[
-X \approx CP^T
-\]
+X ≈ C · Pᵀ
 
 where \(C\) represents item latent factors and \(P\) represents user latent factors. This project investigates how optimization strategy and hyperparameter choices affect reconstruction accuracy and convergence behavior.
 
@@ -49,9 +47,7 @@ matrix-factorization-recommender/
 
 The optimization objective minimizes reconstruction error:
 
-\[
-\min_{C,P} ||X - CP^T||^2
-\]
+minimize || X − (C · Pᵀ) ||²
 
 allowing discovery of hidden relationships between users and items through learned latent embeddings.
 
@@ -63,9 +59,7 @@ One factor matrix is fixed while solving analytically for the other, alternating
 
 Latent factors are iteratively updated using gradient-based optimization:
 
-\[
-\theta = \theta - \eta \nabla L
-\]
+θ = θ − η ∇L
 
 Experiments demonstrate sensitivity to learning rate selection, convergence speed differences, and instability when step sizes are poorly chosen.
 
@@ -86,9 +80,12 @@ Install dependencies:
 
 ```bash
 pip install numpy matplotlib jupyter
-Running the Project
-jupyter notebook
+```
 
+Running the Project
+```bash
+jupyter notebook
+```
 Open the notebook:
 
 notebooks/matrix_factorization_recommender.ipynb
